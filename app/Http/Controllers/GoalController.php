@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Goal;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class GoalController extends Controller
 {
@@ -11,7 +14,7 @@ class GoalController extends Controller
      */
     public function index()
     {
-        //
+        return view('goal.index');
     }
 
     /**
@@ -19,7 +22,7 @@ class GoalController extends Controller
      */
     public function create()
     {
-        //
+        return view('goal.create');
     }
 
     /**
