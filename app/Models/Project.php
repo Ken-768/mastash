@@ -4,9 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\User;
 
-class Goal extends Model
+class Project extends Model
 {
     use HasFactory;
 
@@ -14,7 +13,7 @@ class Goal extends Model
         return $this->belongsTo('App\Models\User');
     }
 
-    public function projects() {
-        return $this->hasMany('App\Models\Project');
+    public function goal() {
+        return $this->belongsTo('App\Models\Goal');
     }
 }
