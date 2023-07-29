@@ -14,7 +14,8 @@ class GoalController extends Controller
      */
     public function index()
     {
-        return view('goal.index');
+        $goals = Goal::all();
+        return view('goal.index', compact('goals'));
     }
 
     /**
